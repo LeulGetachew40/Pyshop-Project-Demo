@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block page_title %}Add Product{% endblock%}
+{% block form %}
+<!--    this is a csrf token that protects us from a csrf attacks -->
+<div class="form-header">
+    <h1 style="text-align: center; margin-top: 100px;">Add Product</h1>
+  <form method='POST' class = "form-product">
+    {% csrf_token %}
+    <!-- {% for field in form %}
+      {{ field.errors }}
+    {% endfor %} -->
+    
+  {{form.as_p}}
+
+<input type="submit" value="Save Product">
+</form>
+</div>
+{% endblock %}
+<!-- 
+<div class="mb-3">
+    <label for="exampleFormControlTextarea1" class="form-label">Add Product</label>
+    {{ form.as_p }}
+  </div> -->

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% for item in blogs %}
+        <li>{{ item.author }} - ({{ item.date }})</li>
+    {% endfor %}
+    <br>
+    <a href="../blog"><button type = 'button'>Blog</button></a>
+    
+    {% for item in farn %}
+        <li>{{ item.prod_name }} - ({{ item.prod_price }})</li>
+    {% endfor %}
+
+    <a href="../products"><button type = 'button'>Products</button></a>
+
+    {% endblock %}

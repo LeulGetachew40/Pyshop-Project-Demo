@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block page_title %}{% endblock%} - Pyshop</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <script src="https://kit.fontawesome.com/2ee6c6ca4c.js" crossorigin="anonymous"></script>
+</head>
+<body style="background-color: blanchedalmond;">
+    {% block page_identity %}{% endblock %}
+    {% block form %} {% endblock %}
+    {% block content %} {% endblock %}
+    
+    <div class="footer">
+      <div class="col-1">
+          <h3>USEFUL LINKS</h3>
+          <a href="#">About</a>
+          <a href="../contacts">Contacts</a>
+          <a href="/products">Products</a>
+          <a href="#">Services</a>
+          <a href="#">News</a>
+      </div>
+      <div class="col-2">
+          <h3>NEWS LETTER</h3>
+          <form>
+              <input type="email" placeholder="Email Address..." required>
+              <br>
+              <button type="submit">SUBSCRIBE NOW</button>
+          </form>
+      </div>
+      <div class="col-3">
+          <h3>CONTACTS</h3>
+          <p>xyz road, 123, po. box - 1245 <br> Addis Ababa <br> Ethiopia</p>
+          <div class="social-icons">
+              <i class="fa-brands fa-facebook" title="Facebook"></i>
+              <i class="fa-brands fa-twitter" title="Twitter"></i>
+              <i class="fa-brands fa-instagram" title="Instagram"></i>
+              <i class="fa-brands fa-pinterest" title="Pinterest"></i>
+          </div>
+      </div>
+  </div>
+</body>
+</html>

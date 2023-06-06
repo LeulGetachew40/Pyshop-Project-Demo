@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block page_title %}{{products.prodname}}{% endblock%}
+
+{% block page_identity %}
+    <h1 style="text-align:center;">Products</h1>
+{% endblock %}
+
+{% block content %}
+
+            <table class="prod-table">
+                <tr>
+                    <td rowspan=100%>
+                        <img src="{{products.prod_img_url}}" title="{{products.prodname}}" alt="{{products.prodname}}" style="width:206.595px; height:218px;">
+                    </td>
+                </tr>
+                <tr>
+                    <td>{{products.prodname}} (${{products.prod_price}})</td>
+                </tr>
+                <tr>
+                    <td>{{products.prod_producer}}</td>
+                </tr>
+                <tr>
+                    <td>{{products.prod_description}}</td>
+                </tr>
+            </table>
+<a href='/'><button type="button" class="btn btn-primary">Back to Home</button></a>
+<a href="/add-product"><button type="button" class="btn btn-primary">Add Product</button></a>
+
+{% endblock %}
